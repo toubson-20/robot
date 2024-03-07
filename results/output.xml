@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-07T13:52:27.752426" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\Users\ytoubiou\OneDrive - Sopra Steria\Documents\dev\robot">
+<suite id="s1-s1" name="Tests" source="C:\Users\ytoubiou\OneDrive - Sopra Steria\Documents\dev\robot\tests">
+<suite id="s1-s1-s1" name="locationTest" source="C:\Users\ytoubiou\OneDrive - Sopra Steria\Documents\dev\robot\tests\locationTest.robot">
+<test id="s1-s1-s1-t1" name="Modifier un locataire" line="56">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-03-07T13:52:28.554057" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\ytoubiou\OneDrive - Sopra Steria\Documents\dev\robot\results\locataires.json"&gt;C:\Users\ytoubiou\OneDrive - Sopra Steria\Documents\dev\robot\results\locataires.json&lt;/a&gt;'.</msg>
+<msg time="2024-03-07T13:52:28.563164" level="INFO">${file_content} = [
+    {
+        "id": 1,
+        "nom": "toubs",
+        "email": "toubs@gmail.com",
+        "telephone": "556544445"
+    },
+    {
+        "id": 6,
+        "nom": "postman",
+        "email": "postman@...</msg>
+<var>${file_content}</var>
+<arg>${PATH}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-03-07T13:52:28.554057" elapsed="0.010115"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-03-07T13:52:28.566173" level="FAIL">Evaluating expression 'json.loads([\n    {\n        "id": 1,\n        "nom": "toubs",\n        "email": "toubs@gmail.com",\n        "telephone": "556544445"\n    },\n    {\n        "id": 6,\n        "nom": "postman",\n        "email": "postman@gmail.com",\n        "telephone": "0750223355"\n    },\n    {\n        "id": 8,\n        "nom": "samsung",\n        "email": "samsungS@gmail.com",\n        "telephone": "0750265377"\n    },\n    {\n        "id": 9,\n        "nom": "John Doe",\n        "email": "johnDoe@gmail.com",\n        "telephone": "0632124574"\n    }\n])' failed: TypeError: the JSON object must be str, bytes or bytearray, not list</msg>
+<var>${template}</var>
+<arg>json.loads(${file_content})</arg>
+<arg>modules=json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="FAIL" start="2024-03-07T13:52:28.565169" elapsed="0.002005">Evaluating expression 'json.loads([\n    {\n        "id": 1,\n        "nom": "toubs",\n        "email": "toubs@gmail.com",\n        "telephone": "556544445"\n    },\n    {\n        "id": 6,\n        "nom": "postman",\n        "email": "postman@gmail.com",\n        "telephone": "0750223355"\n    },\n    {\n        "id": 8,\n        "nom": "samsung",\n        "email": "samsungS@gmail.com",\n        "telephone": "0750265377"\n    },\n    {\n        "id": 9,\n        "nom": "John Doe",\n        "email": "johnDoe@gmail.com",\n        "telephone": "0632124574"\n    }\n])' failed: TypeError: the JSON object must be str, bytes or bytearray, not list</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<arg>${obj}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-03-07T13:52:28.568530" elapsed="0.000000"/>
+</kw>
+<var name="${obj}"/>
+<status status="NOT RUN" start="2024-03-07T13:52:28.567174" elapsed="0.001356"/>
+</iter>
+<var>${obj}</var>
+<value>@{template}</value>
+<status status="NOT RUN" start="2024-03-07T13:52:28.567174" elapsed="0.001356"/>
+</for>
+<status status="FAIL" start="2024-03-07T13:52:28.551715" elapsed="0.017827">Evaluating expression 'json.loads([\n    {\n        "id": 1,\n        "nom": "toubs",\n        "email": "toubs@gmail.com",\n        "telephone": "556544445"\n    },\n    {\n        "id": 6,\n        "nom": "postman",\n        "email": "postman@gmail.com",\n        "telephone": "0750223355"\n    },\n    {\n        "id": 8,\n        "nom": "samsung",\n        "email": "samsungS@gmail.com",\n        "telephone": "0750265377"\n    },\n    {\n        "id": 9,\n        "nom": "John Doe",\n        "email": "johnDoe@gmail.com",\n        "telephone": "0632124574"\n    }\n])' failed: TypeError: the JSON object must be str, bytes or bytearray, not list</status>
+</test>
+<status status="FAIL" start="2024-03-07T13:52:27.803506" elapsed="0.767453"/>
+</suite>
+<status status="FAIL" start="2024-03-07T13:52:27.800491" elapsed="0.773480"/>
+</suite>
+<status status="FAIL" start="2024-03-07T13:52:27.763136" elapsed="0.812836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot">Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Robot.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="locationTest">Robot.Tests.locationTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

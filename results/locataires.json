@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nom": "toubs",
+        "email": "toubs@gmail.com",
+        "telephone": "556544445"
+    },
+    {
+        "id": 6,
+        "nom": "postman",
+        "email": "postman@gmail.com",
+        "telephone": "0750223355"
+    },
+    {
+        "id": 8,
+        "nom": "samsung",
+        "email": "samsungS@gmail.com",
+        "telephone": "0750265377"
+    },
+    {
+        "id": 9,
+        "nom": "John Doe",
+        "email": "johnDoe@gmail.com",
+        "telephone": "0632124574"
+    }
+]
